@@ -17,18 +17,6 @@ class Sudoku():
         self.cuadranteY = 0
         self.listaCuadrante = []
 
-    # def draw_board(self):
-    #     for i in range(len(self.board)):
-    #         if i % 3 == 0 and i != 0:
-    #             print("- - - - - - - - - - - -")
-
-    #         for j in range(len(self.board[0])):
-    #             if j % 3 == 0 and j != 0:
-    #                 print(" | ", end = "")
-    #             if j == 8:
-    #                 print(self.board[i][j])
-    #             else:
-    #                 print(str(self.board[i][j]) + " ", end = "")
 
     def draw_board(self, flag):
         if (flag == 1):
@@ -37,7 +25,6 @@ class Sudoku():
                     for _ in range (self.size + self.region):
                         print("- ", end = '')
                     print()
-                    # print("- - - - - - - - - - - -")
 
                 for j in range(len(self.board[0])):
                     if j % self.region == 0 and j != 0:
@@ -54,12 +41,6 @@ class Sudoku():
             self.cuadranteX = 2
         elif (x >= self.region * 2 and x < self.region * 3):
             self.cuadranteX = 3
-        # if (x>=0 and x<=2):
-        #     self.cuadranteX = 1
-        # elif (x>=3 and x<=5):
-        #     self.cuadranteX = 2
-        # elif (x>=6 and x<=8):
-        #     self.cuadranteX = 3
 
         if (y >= 0 and y < self.region):
             self.cuadranteY = 1
@@ -67,13 +48,6 @@ class Sudoku():
             self.cuadranteY = 2
         elif (y >= self.region * 2 and y < self.region * 3):
             self.cuadranteY = 3
-
-        # if (y>=0 and y<=2):
-        #     self.cuadranteY = 1
-        # elif (y>=3 and y<=5):
-        #     self.cuadranteY = 2
-        # elif (y>=6 and y<=8):
-        #     self.cuadranteY = 3
 
         self.listaCuadrante.clear()
         for fila in range ((self.cuadranteX-1) * self.region, self.cuadranteX * self.region):

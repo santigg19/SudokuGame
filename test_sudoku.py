@@ -61,7 +61,6 @@ class TestSudoku(unittest.TestCase):
 
         sudoku.insert_number(1, 1, 3, 0)
         self.assertFalse(sudoku.insert_number(1, 1, 3, 0))
-        #self.assertTrue(sudoku.insert_number(1, 2, 4))
 
     def test_different_values(self):
 
@@ -96,8 +95,6 @@ class TestSudoku(unittest.TestCase):
         sudoku.insert_number(2, 0, 2, 0)
         self.assertTrue(sudoku.insert_number)
 
-        # self.assertEqual(sudoku.board[0][2], "2")
-
 
     def test_if_win_false(self):
 
@@ -115,15 +112,6 @@ class TestSudoku(unittest.TestCase):
 
     def test_if_win_true(self):
 
-        # sudoku = Sudoku([["8", "3", "6", "9", "7", "4", "2", "1", "5"],
-        #                  ["7", "1", "5", "3", "6", "2", "8", "4", "9"],
-        #                  ["4", "2", "9", "1", "5", "8", "6", "7", "3"],
-        #                  ["6", "9", "1", "7", "4", "5", "3", "2", "8"],
-        #                  ["3", "7", "2", "6", "8", "9", "1", "5", "4"],
-        #                  ["5", "4", "8", "2", "3", "1", "7", "9", "6"],
-        #                  ["1", "5", "4", "8", "2", "6", "9", "3", "7"],
-        #                  ["9", "6", "7", "5", "1", "3", "4", "8", "2"],
-        #                  ["2", "8", "3", "4", "9", "7", "5", "6", "1"]])
         sudoku = Sudoku([["5", "3", "4", "6", "7", "8", "9", "1", "2"],
                          ["6", "7", "2", "1", "9", "5", "3", "4", "8"],
                          ["1", "9", "8", "3", "4", "2", "5", "6", "7"],
@@ -149,14 +137,8 @@ class TestSudoku(unittest.TestCase):
                          ["x", "x", "x", "4", "1", "9", "x", "x", "5"],
                          ["x", "x", "x", "x", "8", "x", "x", "7", "9"]])
 
-        #sudoku.insert_number(2, 0, 1)
 
-        # self.assertFalse(sudoku.valid())
-        #self.assertFalse(sudoku.row_validation)
         self.assertFalse(sudoku.insert_number(2, 8, 8, 0))
-        #self.assertNotEqual(sudoku.board[0][1], "2")
-        # self.assertFalse(sudoku.insert_number(2, 0, 1))
-        # return False
 
     def test_Sudoku_6(self):
 
@@ -171,8 +153,6 @@ class TestSudoku(unittest.TestCase):
                          ["x", "x", "x", "x", "8", "x", "x", "7", "9"]])
 
 
-        # sudoku.insert_number(2, 0, 2)
-        # self.assertEqual(sudoku.board[0][2], "2")
         self.assertFalse(sudoku.insert_number(2, 0, 2, 0))
     
     def test_non_valid(self):
